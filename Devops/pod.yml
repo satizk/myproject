@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: newapp
+  name: satizapp
   labels:
-    name: newapp
+    name: satizapp
 spec:
   containers:
-  - name: newapp
+  - name: satizapp
     image: httpd
     resources:
       limits:
