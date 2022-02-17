@@ -12,7 +12,7 @@ spec:
         app: satizapp
     spec:
       containers:
-      - name: myapp
+      - name: satizapp
         image: httpd
         resources:
           limits:
