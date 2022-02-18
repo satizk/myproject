@@ -7,12 +7,12 @@ spec:
  - name: myvolume
    emptyDir: {}
  containers:
- - name: 1st container
+ - name: nginx-container
    image: nginx
    volumeMounts:
    - name: myvolume
      mountPath: /usr/share/nginx/html
- - name: 2nd container
+ - name: debian-container
    image: debian
    volumeMounts:
    - name: myvolume
