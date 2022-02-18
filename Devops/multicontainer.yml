@@ -1,19 +1,16 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
-  name: multicontainerpod
+  name: redis-django
+  labels:
+    app: web
 spec:
- volumes:
- - name: myvolume
-   emptyDir: {}
- containers:
- - name: nginx-container
-   image: nginx
-   volumeMounts:
-   - name: myvolume
-     mountPath: /usr/share/nginx/html
- - name: httpd-container
-   image: httpd
-   volumeMounts:
-   - name: myvolume
-     mountPath: /html
+  containers:
+    - name: key-value-store
+      image: redis
+      ports:
+        - containerPort: 6379
+    - name: frontend
+      image: django
+      ports:
+        - containerPort: 8000
