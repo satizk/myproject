@@ -23,5 +23,5 @@ spec:
     args:
       - while true; do
          echo "welcome to nginx" >> /html/index.html;
-          sleep 10;
+          sleep 60;
         done
