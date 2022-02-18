@@ -1,0 +1,25 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: multicontainerpod
+spec:
+ volumes:
+ - name: myvolume
+   emptyDir: {}
+ containers:
+ - name: 1st container
+   image: nginx
+   volumeMounts:
+   - name: myvolume
+     mountPath: /usr/share/nginx/html
+ - name: 2nd container
+   image: debian
+   volumeMounts:
+   - name: myvolume
+     mountPath: /html
+     command: ["/bin/sh", "-c"]
+     args:
+      - while true; do
+          date >> /html/index.html;
+          sleep 1;
+        done
