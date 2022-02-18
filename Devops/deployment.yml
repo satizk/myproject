@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: satizapp
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: satizapp
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: satizapp
-        image: nginx
+        image: httpd
         resources:
           limits:
             memory: "128Mi"
