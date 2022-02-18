@@ -28,9 +28,13 @@ kind: Service
 metadata:
   name: newservice
 spec:
+  type: NodePort
   selector:
     app: satizapp
   ports:
-  - port: 80
-    targetPort: 80
-    nodePort: 30001
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 80
+      targetPort: 80
+      # Optional field
+      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+      nodePort: 30005
