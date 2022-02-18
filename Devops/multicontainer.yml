@@ -5,7 +5,9 @@ metadata:
 spec:
   volumes:
   - name: html
-    emptyDir: {}
+    hostPath: 
+      path: /mnt/data
+      type: Directory
   containers:
   - name: nginx-container
     image: nginx
