@@ -2,4 +2,6 @@
 
 New respository for Git taasks
 
-Adding from CMD
+1.Adding from GUI
+2.Adding from CMD
+
