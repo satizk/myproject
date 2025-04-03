@@ -1,4 +1,3 @@
-### Creating new git repo
+## To Start Git ##
 
-Added New file
-Updated the changes
+New respository for Git taasks
