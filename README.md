@@ -1,3 +1,4 @@
 ## To Start Git ##
 
-New respository for Git taasks
+New respository for Git tasks
+Added Licenses.
